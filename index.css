@@ -1,0 +1,78 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    max-width: 47rem;
+    margin: 0 auto;
+    width: 80%;
+    box-sizing: border-box;
+    display: block;
+    background-color: #000000;
+
+    color: #ffffff;
+    text-decoration: none;
+    line-height: 1.25rem;
+}
+
+@media (min-width: 48rem) {
+    body {
+        max-width: 47rem;
+        line-height: 1.5rem;
+    }
+}
+
+h1,
+h2,
+h3 {
+    line-height: 2rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+h2 {
+    font-size: 1.25rem;
+}
+h3 {
+    font-size: 1rem;
+}
+
+p {
+    font-size: 0.875rem;
+}
+
+a {
+    color: #1864ab;
+    text-decoration: underline;
+}
+
+a:hover,
+a:active {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (min-width: 48rem) {
+    h1,
+    h2,
+    h3 {
+        line-height: 2rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
