@@ -22,6 +22,7 @@ body {
 .head {
     width: 100%;
     max-width: 47rem;
+    padding: 1rem 0 0;
     margin: 1rem auto;
 }
 
