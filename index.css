@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Press+Start+2P&family=Zilla+Slab:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Round');
 
 html,
 body {
@@ -8,8 +8,7 @@ body {
 }
 
 body {
-    max-width: 47rem;
-    width: 80%;
+    max-width: 80rem;
     margin: 0 auto;
     box-sizing: border-box;
     display: block;
@@ -17,6 +16,13 @@ body {
     color: #ffffff;
     text-decoration: none;
     line-height: 1.25rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.head {
+    width: 100%;
+    max-width: 47rem;
+    margin: 1rem auto;
 }
 
 .head-logo {
@@ -60,6 +66,78 @@ body {
         .head-logo-label {
             font-size: 4rem;
             padding-left: 24px;
+        }
+    }
+}
+
+.navigation {
+    padding: 0 1rem;
+}
+
+.navigation-container {
+    height: 3rem;
+}
+
+.navigation-drawer {
+    background-color: #000000;
+    color: #37b24d;
+    height: 2rem;
+    width: 2rem;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+.navigation-drawer-icon {
+    font-size: 2rem;
+    outline-style: none;
+}
+
+.navigation-title {
+    font-family: 'Zilla Slab', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    word-spacing: 0.25rem;
+    color: #dee2e6;
+}
+
+.navigation-items {
+    display: none;
+}
+
+@supports (display: flex) {
+    .navigation-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .navigation-title {
+        flex-grow: 2;
+        padding-left: 2rem;
+    }
+
+    @media (min-width: 48rem) {
+        .navigation-container {
+            height: 6rem;
+        }
+
+        .navigation-drawer {
+            background-color: #000000;
+            color: #37b24d;
+            width: 3rem;
+            height: 3rem;
+        }
+
+        .navigation-drawer-icon {
+            font-size: 3rem;
+            outline-style: none;
+        }
+
+        .navigation-title {
+            font-size: 2rem;
+            word-spacing: 0.5rem;
+            padding-left: 3rem;
         }
     }
 }
