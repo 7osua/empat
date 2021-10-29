@@ -11,5 +11,9 @@ self.addEventListener('install', (e) => {
 });
 
 self.addEventListener('fetch', (e) => {
-    console.lof(`Intercepting fetch request for : ${e.request.url}`);
+    e.respondWith(
+        caches.match(e.request).than((response) => {
+            return response || fecth(e.request);
+        }),
+    );
 });
