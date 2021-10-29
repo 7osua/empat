@@ -34,9 +34,22 @@ const writeNavigation = function () {
     );
 };
 
-const initPage = function(){
-  writeHeader();
-  writeNavigation();  
+const initPage = function () {
+    writeHeader();
+    writeNavigation();
 };
 
 window.onload = initPage();
+
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+        .register('servWork.js')
+        .then((registration) => {
+            console.log('Service Worker Registered !');
+            console.log(registration);
+        })
+        .catch((error) => {
+            console.log('Sevice Worker Registration Failed !');
+            console.log(error);
+        });
+}
