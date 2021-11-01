@@ -1,5 +1,5 @@
 const root = document.getElementById('root');
-const writeHeader = function () {
+const createHeader = function () {
     document.body.insertAdjacentHTML(
         'beforeend',
         `
@@ -15,7 +15,40 @@ const writeHeader = function () {
     );
 };
 
-const writeNavigation = function () {
+const createNavigationMenu = function () {
+    document.body.insertAdjacentHTML(
+        'beforeend',
+        ` 
+            <div class="navigation-menu">
+                <ul class="navigation-menu-items">
+                    <li class="navigation-menu-item">
+                        <h3 class="menu-head">Traveling</h3>
+                        <ul class="sub-items">
+                            <li class="sub-item"><a>Apa ?</a></li>
+                            <li class="sub-item"><a>Kenapa ?</a></li>
+                            <li class="sub-item"><a>Bagaimana ?</a></li>
+                        </ul>
+                    </li>
+                    <li class="navigation-menu-item">
+                        <h3 class="menu-head">Budgeting</h3>
+                        <ul class="sub-items">
+                            <li class="sub-item"><a>Apa ?</a></li>
+                            <li class="sub-item"><a>Kenapa ?</a></li>
+                            <li class="sub-item"><a>Bagaimana ?</a></li>
+                        </ul>
+                    </li>
+                    <li class="navigation-menu-item">
+                        <h3 class="menu-head">
+                            <a>Persiapan</a>
+                        <h3>
+                    </li>
+                </ul>
+            </div>
+        `,
+    );
+};
+
+const createNavigation = function () {
     document.body.insertAdjacentHTML(
         'beforeend',
         `
@@ -24,7 +57,7 @@ const writeNavigation = function () {
                         <button class='navigation-drawer'>
                               <span class="navigation-drawer-icon material-icons-round"> menu </span>
                         </button>
-                        <h2 class="navigation-title">Travel & Bugdet</h2>
+                        <h2 class="navigation-title">Budget &amp; Travel</h2>
                         <button class="navigation-drawer">
                               <span class="navigation-drawer-icon material-icons-round"> more_vert </span>
                         </button>
@@ -34,9 +67,21 @@ const writeNavigation = function () {
     );
 };
 
+
+const createBackdrop = function () {
+    document.body.insertAdjacentHTML(
+        'afterbegin',
+        `
+            <div class="backdrop"></div>
+        `,
+    );
+};
+
 const initPage = function () {
-    writeHeader();
-    writeNavigation();
+    createHeader();
+    createBackdrop();
+    createNavigationMenu();
+    createNavigation();
 };
 
 window.onload = initPage();
