@@ -1,4 +1,5 @@
 const root = document.getElementById('root');
+
 const createHeader = function () {
     document.body.insertAdjacentHTML(
         'beforeend',
@@ -54,7 +55,7 @@ const createNavigation = function () {
         `
             <nav class="navigation">
                   <div class="navigation-container">
-                        <button class='navigation-drawer'>
+                        <button class='navigation-drawer show-menu'>
                               <span class="navigation-drawer-icon material-icons-round"> menu </span>
                         </button>
                         <h2 class="navigation-title">Budget &amp; Travel</h2>
@@ -66,7 +67,6 @@ const createNavigation = function () {
     `,
     );
 };
-
 
 const createBackdrop = function () {
     document.body.insertAdjacentHTML(
@@ -84,8 +84,6 @@ const initPage = function () {
     createNavigation();
 };
 
-window.onload = initPage();
-
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker
         .register('servWork.js')
@@ -98,3 +96,29 @@ if ('serviceWorker' in navigator) {
             console.log(error);
         });
 }
+
+window.onload = initPage();
+
+const navigationBtn = document.querySelector('.show-menu');
+const navigationMenu = document.querySelector('.navigation-menu');
+const backdrop = document.querySelector('.backdrop');
+
+const navigationShowMenu = function () {
+    navigationMenu.style.display = 'block';
+    backdrop.style.display = 'block';
+    backdrop.classList.toggle('open');
+    navigationMenu.classList.toggle('open');
+};
+
+const navigationWrapMenu = function () {
+    navigationMenu.classList.remove('open');
+    navigationMenu.style.display = 'none';
+    backdrop.classList.remove('open');
+    backdrop.style.display = 'none';
+};
+
+backdrop.addEventListener('click', navigationWrapMenu);
+navigationBtn.addEventListener('click', navigationShowMenu);
+
+console.log(navigationBtn);
+console.log(navigationMenu);
