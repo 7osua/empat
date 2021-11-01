@@ -23,7 +23,7 @@ const createNavigationMenu = function () {
             <div class="navigation-menu">
                 <ul class="navigation-menu-items">
                     <li class="navigation-menu-item">
-                        <h3 class="menu-head">Traveling</h3>
+                        <h3 class="menu-head">Perencanaan</h3>
                         <ul class="sub-items">
                             <li class="sub-item"><a>Apa ?</a></li>
                             <li class="sub-item"><a>Kenapa ?</a></li>
@@ -58,7 +58,7 @@ const createNavigation = function () {
                         <button class='navigation-drawer show-menu'>
                               <span class="navigation-drawer-icon material-icons-round"> menu </span>
                         </button>
-                        <h2 class="navigation-title">Budget &amp; Travel</h2>
+                        <h2 class="navigation-title">Finance Plan &amp; Budgeting</h2>
                         <button class="navigation-drawer">
                               <span class="navigation-drawer-icon material-icons-round"> more_vert </span>
                         </button>
