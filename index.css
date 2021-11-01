@@ -130,6 +130,7 @@ body {
     font-family: 'Zilla Slab', serif;
     font-size: 1.25rem;
     line-height: 0.5rem;
+    color: #868e96;
 }
 
 .sub-items {
@@ -138,11 +139,27 @@ body {
     line-height: 2rem;
 }
 
-.sub-item {
-    font-family: inherit;
+.sub-item,
+.navigation-menu-item > h3 > a {
+    font-family: 'Poppins', serif;
     font-size: 0.875rem;
     font-weight: 300;
     line-height: 1.75rem;
+    color: #f8f9fa;
+}
+
+.sub-item a,
+.navigation-menu-item > h3 > a {
+    cursor: pointer;
+    border-bottom: #228be6 solid 2px;
+}
+
+.sub-item a:active,
+.sub-item a:hover,
+.navigation-menu-item > h3 > a:active,
+.navigation-menu-item > h3 > a:hover {
+    background-color: #1864ab;
+    border: none;
 }
 
 @media (min-width: 48rem) {
@@ -155,7 +172,8 @@ body {
         padding: 0 0 0 2rem;
     }
 
-    .sub-item {
+    .sub-item,
+    .navigation-menu-item > h3 > a {
         font-size: 1.5rem;
         line-height: 3rem;
     }
@@ -171,7 +189,6 @@ body {
 
 .navigation-drawer {
     background-color: #000000;
-    color: #37b24d;
     height: 2rem;
     width: 2rem;
     padding: 0;
@@ -182,6 +199,7 @@ body {
 
 .navigation-drawer-icon {
     font-size: 2rem;
+    color:  #f8f9fa;
     outline-style: none;
 }
 
@@ -190,7 +208,7 @@ body {
     font-size: 1.25rem;
     font-weight: 700;
     word-spacing: 0.25rem;
-    color: #dee2e6;
+    color: #868e96;
 }
 
 .navigation-items {
@@ -205,7 +223,7 @@ body {
 
     .navigation-title {
         flex-grow: 2;
-        padding-left: 2rem;
+        padding-left: 1.5rem;
     }
 
     @media (min-width: 48rem) {
@@ -215,7 +233,6 @@ body {
 
         .navigation-drawer {
             background-color: #000000;
-            color: #37b24d;
             width: 3rem;
             height: 3rem;
         }

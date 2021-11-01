@@ -58,7 +58,7 @@ const createNavigation = function () {
                         <button class='navigation-drawer show-menu'>
                               <span class="navigation-drawer-icon material-icons-round"> menu </span>
                         </button>
-                        <h2 class="navigation-title">Finance Plan &amp; Budgeting</h2>
+                        <h2 class="navigation-title">Alokasi untuk besok</h2>
                         <button class="navigation-drawer">
                               <span class="navigation-drawer-icon material-icons-round"> more_vert </span>
                         </button>
@@ -78,10 +78,10 @@ const createBackdrop = function () {
 };
 
 const initPage = function () {
-    createHeader();
     createBackdrop();
     createNavigationMenu();
     createNavigation();
+    createHeader();
 };
 
 if ('serviceWorker' in navigator) {
