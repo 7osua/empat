@@ -112,13 +112,10 @@ const navigationShowMenu = function () {
 
 const navigationWrapMenu = function () {
     navigationMenu.classList.remove('open');
-    navigationMenu.style.display = 'none';
     backdrop.classList.remove('open');
+    navigationMenu.style.display = 'none';
     backdrop.style.display = 'none';
 };
 
 backdrop.addEventListener('click', navigationWrapMenu);
 navigationBtn.addEventListener('click', navigationShowMenu);
-
-console.log(navigationBtn);
-console.log(navigationMenu);

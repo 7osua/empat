@@ -5,6 +5,8 @@ self.addEventListener('install', (e) => {
                 './',
                 'index.css',
                 '/favicon_io/android-chrome-192x192.png',
+                '/favicon_io/favicon-32x32.png',
+                '/favicon_io/favicon-16x16.png',
             ]);
         }),
     );
